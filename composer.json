@@ -1,0 +1,19 @@
+{
+    "name": "goweb/php-wa",
+    "description": "API wraper for WA service",
+    "authors": [
+        {
+            "name": "Dmytro Sokil",
+            "email": "sokil@goweb.com"
+        }
+    ],
+    "require": {
+        "guzzle/guzzle": "3.7.*",
+        "psr/log": "~1.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "GoWeb": "src/"
+        }
+    }
+}
