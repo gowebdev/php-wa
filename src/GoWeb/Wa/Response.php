@@ -38,4 +38,8 @@ class Response
     {
         return $this->get('status');
     }
+    
+    public function __toString() {
+        return json_encode($this->_data);
+    }
 }
