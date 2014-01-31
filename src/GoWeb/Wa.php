@@ -114,6 +114,24 @@ class Wa
         return new $className($this);
     }
     
+    /**
+     * 
+     * @return \GoWeb\Wa\Command\Upload
+     */
+    public function upload()
+    {
+        return $this->createCommand('upload');
+    }
+    
+    /**
+     * 
+     * @return \GoWeb\Wa\Command\Delete
+     */
+    public function delete()
+    {
+        return $this->createCommand('delete');
+    }
+    
     public function setLogger(\Psr\Log\LoggerInterface $logger)
     {
         $this->_logger = $logger;
