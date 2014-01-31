@@ -31,7 +31,7 @@ abstract class Command
         if(!$this->_request) {
             $this->_request = $this->_wa
                 ->getConnection()
-                ->get('/');
+                ->get();
             
             // apply token
             if(!($this instanceof \GoWeb\Wa\Command\Auth)) {
