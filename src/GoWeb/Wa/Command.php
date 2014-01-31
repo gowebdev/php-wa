@@ -50,7 +50,7 @@ abstract class Command
     {
         $request = $this->getRequest();
         
-        $request->getQuery()->set('commend', strtolower(get_class()));
+        $request->getQuery()->set('command', strtolower(get_class()));
         
         if($this->_wa->hasLogger()) {
             $this->_wa->getLogger()->debug((string) $request);
