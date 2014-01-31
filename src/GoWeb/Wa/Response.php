@@ -4,10 +4,21 @@ namespace GoWeb\Wa;
 
 class Response
 {
-    protected $_data;
+    /**
+     *
+     * @var \Guzzle\Http\Message\Response
+     */
+    private $_response;
     
-    public function __construct(array $data) {
-        $this->_data = $data;
+    /**
+     *
+     * @var array
+     */
+    private $_data;
+    
+    public function __construct(\Guzzle\Http\Message\Response $response) {
+        $this->_response = $response;
+        $this->_data = $response->json();
     }
     
     public function __get($name)
@@ -40,6 +51,6 @@ class Response
     }
     
     public function __toString() {
-        return json_encode($this->_data);
+        return (string) $this->_response;
     }
 }

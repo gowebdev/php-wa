@@ -68,6 +68,6 @@ abstract class Command
             $this->_wa->getLogger()->debug((string) $response);
         }
         
-        return new $this->_responseClass($response->json());
+        return new $this->_responseClass($response);
     }
 }
