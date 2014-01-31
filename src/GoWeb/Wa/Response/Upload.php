@@ -10,4 +10,9 @@ class Upload extends Response
     {
         return $this->get('upload.url');
     }
+    
+    public function getProgressUrl()
+    {
+        return $this->get('progress.url');
+    }
 }
