@@ -19,6 +19,10 @@ class Response
     public function __construct(\Guzzle\Http\Message\Response $response) {
         $this->_response = $response;
         $this->_data = $response->json();
+        
+        if($this->isErrorOccured()) {
+            throw new Exception($this->getErrorMessage());
+        }
     }
     
     public function __get($name)
@@ -47,7 +51,17 @@ class Response
     
     public function getStatus()
     {
-        return $this->get('status');
+        return (int) $this->get('status');
+    }
+    
+    public function isErrorOccured()
+    {
+        return 0 !== $this->getStatus();
+    }
+    
+    public function getErrorMessage()
+    {
+        return $this->get('errno');
     }
     
     public function __toString() {
