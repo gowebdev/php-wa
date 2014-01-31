@@ -33,6 +33,11 @@ class Wa
         return $this;
     }
     
+    public function getServer()
+    {
+        return $this->_serverURL;
+    }
+    
     /**
      * 
      * @param type $login
