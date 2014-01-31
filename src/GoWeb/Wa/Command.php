@@ -46,11 +46,17 @@ abstract class Command
         return $this->_request;
     }
     
+    public function getCommandName()
+    {
+        $path = explode('\\', get_called_class());
+        return strtolower(array_pop($path));
+    }
+    
     public function send()
     {
         $request = $this->getRequest();
         
-        $request->getQuery()->set('command', strtolower(get_class()));
+        $request->getQuery()->set('command', $this->getCommandName());
         
         if($this->_wa->hasLogger()) {
             $this->_wa->getLogger()->debug((string) $request);
