@@ -61,7 +61,13 @@ class Response
     
     public function getErrorMessage()
     {
-        return $this->get('errno');
+        $message =  $this->get('strerror');
+        
+        if($this->get('msg')) {
+            $message .= '' . $this->get('msg');
+        }
+        
+        return $message;
     }
     
     public function __toString() {
