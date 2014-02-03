@@ -31,7 +31,7 @@ class UploadResult extends Structure
     
     public function getErrorMessage()
     {
-        return 'extra.uploads.' . $this->_key . '.strerror' . $this->get('extra.uploads.' . $this->_key . '.strerror');
+        return $this->get('extra.uploads.' . $this->_key . '.strerror');
     }
     
     public function getId()
