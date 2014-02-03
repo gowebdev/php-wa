@@ -21,7 +21,7 @@ class UploadResult extends Structure
     
     public function getStatus()
     {
-        return $this->get('extra.uploads.' . $this->_key . '.status');
+        return (int) $this->get('extra.uploads.' . $this->_key . '.status');
     }
     
     public function isErrorOccured()
@@ -31,7 +31,7 @@ class UploadResult extends Structure
     
     public function getErrorMessage()
     {
-        return $this->get('extra.uploads.' . $this->_key . '.strerror');
+        return 'extra.uploads.' . $this->_key . '.strerror' . $this->get('extra.uploads.' . $this->_key . '.strerror');
     }
     
     public function getId()
