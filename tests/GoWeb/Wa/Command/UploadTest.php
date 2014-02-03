@@ -27,7 +27,7 @@ class UploadTest extends \Guzzle\Tests\GuzzleTestCase
                     'stor_id' => '10',
                     'category' => 'vod'
                 ),
-                'url' => 'http =>//stra3.ytv.su/up1/upload?sign=0XaAsq19woSAum1k4RFbog&exp=1390861636&uid=18&X-Progress-ID=r47DXbVJ65pwnJM7g8vV'
+                'url' => 'http://stra4.ytv.su/up1/upload?exp=1391431337&stra_id=5&uid=18&stor_id=11&category=socs&X-Progress-ID=dTDiadBB6rmBzocOXEIS&sign=Yp0AxbcCYjx8UNm5d_r-_g'
             ),
             'errno' => 'All OK',
             'command' => 'upload'
@@ -48,7 +48,7 @@ class UploadTest extends \Guzzle\Tests\GuzzleTestCase
             ->send();
         
         $this->assertEquals(
-            'http =>//stra3.ytv.su/up1/upload?sign=0XaAsq19woSAum1k4RFbog&exp=1390861636&uid=18&X-Progress-ID=r47DXbVJ65pwnJM7g8vV',
+            'http://stra4.ytv.su/up1/upload?exp=1391431337&stra_id=5&uid=18&stor_id=11&category=socs&X-Progress-ID=dTDiadBB6rmBzocOXEIS&sign=Yp0AxbcCYjx8UNm5d_r-_g',
             $response->getUploadUrl()
         );
         
