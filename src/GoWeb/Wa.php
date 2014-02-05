@@ -137,6 +137,15 @@ class Wa
         return $this->createCommand('delete');
     }
     
+    /**
+     * 
+     * @return \GoWeb\Wa\Command\Mstatus
+     */
+    public function multiStatus()
+    {
+        return $this->createCommand('mstatus');
+    }
+    
     public function setLogger(\Psr\Log\LoggerInterface $logger)
     {
         $this->_logger = $logger;
