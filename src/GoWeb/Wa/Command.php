@@ -59,7 +59,7 @@ abstract class Command
         $request->getQuery()->set('command', $this->getCommandName());
         
         if($this->_wa->hasLogger()) {
-            $this->_wa->getLogger()->debug((string) $request);
+            $this->_wa->getLogger()->debug($request->getUrl() . PHP_EOL . PHP_EOL . (string) $request);
         }
         
         $response = $request->send();
