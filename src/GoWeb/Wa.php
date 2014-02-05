@@ -130,11 +130,11 @@ class Wa
     
     /**
      * 
-     * @return \GoWeb\Wa\Command\Delete
+     * @return \GoWeb\Wa\Command\Remove
      */
-    public function delete()
+    public function remove()
     {
-        return $this->createCommand('delete');
+        return $this->createCommand('remove');
     }
     
     /**
