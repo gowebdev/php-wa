@@ -6,6 +6,11 @@ use GoWeb\Wa\Structure;
 
 class Fileinfo extends Structure
 {
+    public function getId()
+    {
+        return (int) $this->get('id');
+    }
+    
     public function getLastState()
     {
         return $this->get('laststate');
@@ -41,11 +46,11 @@ class Fileinfo extends Structure
     
     public function getConfirmator()
     {
-        return $this->get('confirmator');
+        return (int) $this->get('confirmator');
     }
     
     public function isConfirmed()
     {
-        return (bool) $this->getConfirmator();
+        return (bool) $this->get('confirmator');
     }
 }
