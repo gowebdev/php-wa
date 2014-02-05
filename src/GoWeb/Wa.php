@@ -148,7 +148,7 @@ class Wa
     
     /**
      * 
-     * @return \GoWeb\Wa\Command\Mstatus
+     * @return \GoWeb\Wa\Command\Confirm
      */
     public function confirm()
     {
