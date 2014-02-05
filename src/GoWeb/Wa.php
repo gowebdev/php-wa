@@ -146,6 +146,15 @@ class Wa
         return $this->createCommand('mstatus');
     }
     
+    /**
+     * 
+     * @return \GoWeb\Wa\Command\Mstatus
+     */
+    public function confirm()
+    {
+        return $this->createCommand('confirm');
+    }
+    
     public function setLogger(\Psr\Log\LoggerInterface $logger)
     {
         $this->_logger = $logger;
