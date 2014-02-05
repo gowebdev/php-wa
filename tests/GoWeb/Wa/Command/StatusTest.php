@@ -54,7 +54,7 @@ class StatusTest extends \Guzzle\Tests\GuzzleTestCase
         
         $this->assertEquals(
             'stra_t_queued',
-            $response->getLastState()
+            $response->getFileInfo()->getLastState()
         );
         
     }

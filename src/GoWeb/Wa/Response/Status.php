@@ -3,11 +3,21 @@
 namespace GoWeb\Wa\Response;
 
 use GoWeb\Wa\Response;
+use GoWeb\Wa\Response\Status\Fileinfo;
 
 class Status extends Response
 {
-    public function getLastState()
+    private $_fileInfo;
+    
+    public function getFileInfo()
     {
-        return $this->get('fileinfo.laststate');
+        if(!$this->_fileInfo) {
+            $this->_fileInfo = new Fileinfo;
+            $this->_fileInfo->setFromArray($this->get('fileinfo'));
+        }
+        
+        return $this->_fileInfo;
     }
+    
+    
 }
