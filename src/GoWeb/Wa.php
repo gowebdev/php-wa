@@ -148,6 +148,15 @@ class Wa
     
     /**
      * 
+     * @return \GoWeb\Wa\Command\Status
+     */
+    public function status()
+    {
+        return $this->createCommand('status');
+    }
+    
+    /**
+     * 
      * @return \GoWeb\Wa\Command\Confirm
      */
     public function confirm()
