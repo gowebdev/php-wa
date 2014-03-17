@@ -4,6 +4,9 @@ namespace GoWeb\Wa\Command;
 
 use GoWeb\Wa\Command;
 
+/**
+ * @method \GoWeb\Wa\Response\Remove send() send command
+ */
 class Remove extends Command
 {
     protected $_responseClass = '\GoWeb\Wa\Response\Remove';
