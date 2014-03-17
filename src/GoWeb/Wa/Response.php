@@ -13,10 +13,6 @@ class Response extends Structure
     public function __construct(\Guzzle\Http\Message\Response $response) {
         $this->_response = $response;
         $this->setFromArray($response->json());
-        
-        if($this->isErrorOccured()) {
-            throw new Exception($this->getErrorMessage());
-        }
     }
     
     
