@@ -36,7 +36,7 @@ class Response extends Structure
         $message =  $this->get('strerror');
         
         if($this->get('msg')) {
-            $message .= '' . $this->get('msg');
+            $message .= '; ' . $this->get('msg');
         }
         
         return $message;
