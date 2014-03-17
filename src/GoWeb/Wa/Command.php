@@ -52,6 +52,10 @@ abstract class Command
         return strtolower(array_pop($path));
     }
     
+    /**
+     * 
+     * @return \GoWeb\Wa\Response
+     */
     public function send()
     {
         $request = $this->getRequest();
