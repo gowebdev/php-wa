@@ -15,6 +15,6 @@ class Remove extends Response
     
     public function isAlreadyRemovedError()
     {
-        return $this->getStatus() === ERROR_INSUFFICIENT_ENVIRONMENT;
+        return $this->getStatus() === self::ERROR_INSUFFICIENT_ENVIRONMENT;
     }
 }
