@@ -33,7 +33,7 @@ class Response extends Structure
     
     public function getErrorMessage()
     {
-        $message =  $this->get('strerror');
+        $message =  'Error #' . $this->getStatus() . ': ' . $this->get('strerror');
         
         if($this->get('msg')) {
             $message .= '; ' . $this->get('msg');
