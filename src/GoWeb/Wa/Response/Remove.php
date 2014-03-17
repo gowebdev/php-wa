@@ -6,8 +6,15 @@ use GoWeb\Wa\Response;
 
 class Remove extends Response
 {
+    const ERROR_INSUFFICIENT_ENVIRONMENT    = 7;
+    
     public function getUrl()
     {
         return $this->get('remove.url');
+    }
+    
+    public function isAlreadyRemovedError()
+    {
+        return $this->getStatus() === ERROR_INSUFFICIENT_ENVIRONMENT;
     }
 }
